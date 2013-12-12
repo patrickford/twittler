@@ -4,12 +4,20 @@
     <script src="js/jquery.js"></script>
     <script src="js/data_generator.js"></script>
     <script src="js/twittler.js"></script>
+    <link href="css/twittler.css" rel="stylesheet">
+    <title>Twittler</title>
   </head>
   <body>
+    <header>
+      <h1 class="logo">Twittler</h1>
+    </header>
+    <div class="tweetlist">
+    </div>
     <script>
 
       $(document).ready(function(){
         refreshTweets();
+        setInterval("refreshTweets();",5000);
       });
 
     </script>
