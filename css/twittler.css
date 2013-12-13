@@ -20,8 +20,11 @@ a {
   text-align: center;
 }
 
-.tweets {
-
+.tweetlist {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
 }
 
 

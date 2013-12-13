@@ -10,10 +10,14 @@ var refreshTweets = function(){
   var index = streams.home.length - 1;
   while(index >= 0){
     var tweet = streams.home[index];
-    console.log(streams.home.length);
     var $tweet = $('<div></div>');
     $tweet.text('@' + tweet.user + ': ' + tweet.message);
     $tweet.appendTo($tweetlist);
     index -= 1;
   };
 }
+
+function sendTweet() {
+  var userInput = document.getElementById("draft").value;
+  writeTweet(userInput);
+} 
