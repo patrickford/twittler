@@ -10,15 +10,18 @@
   <body>
     <h1 class="logo">Twittler</h1>
     <div class="newTweet">
-      <input id="draft" type="textarea" placeholder="Compose new Tweet..." size="140"> <button class="send" onclick="sendTweet()" >Tweet</button>
+      <input id="draft" type="textarea" placeholder="Compose new Tweet..." size="140"> 
+      <button class="send" onclick="sendTweet()" >Tweet</button>
     </div>
     <div class="tweetlist">
+    </div>
+    <div>
+      <button id="refresh" onclick="refreshTweets()">Refresh Tweets</button>
     </div>
     <script>
 
       $(document).ready(function(){
         refreshTweets();
-        setInterval("refreshTweets();",5000);
       });
 
     </script>

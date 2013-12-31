@@ -7,17 +7,20 @@ var refreshTweets = function(){
   var $tweetlist = $('.tweetlist');
   $tweetlist.html('');
 
-  var index = streams.home.length - 1;
-  while(index >= 0){
-    var tweet = streams.home[index];
+  var lastTweet = streams.home.length - 1;
+  console.log(lastTweet)
+  for (var i = lastTweet; i > lastTweet-10; i--) {
+    var tweet = streams.home[i];
     var $tweet = $('<div></div>');
     $tweet.text('@' + tweet.user + ': ' + tweet.message);
     $tweet.appendTo($tweetlist);
-    index -= 1;
   };
 }
 
 function sendTweet() {
   var userInput = document.getElementById("draft").value;
   writeTweet(userInput);
+  refreshTweets();
+  document.getElementById("draft").value = '';
 } 
+
