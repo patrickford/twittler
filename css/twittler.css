@@ -12,7 +12,7 @@ li {
 }
 
 a {
-  text-decoration: none
+  color: ;
 }
 
 .logo {
@@ -37,18 +37,29 @@ a {
   width: 500px;
 }
 
-.tweetlist {
-  border-style: solid;
-  border-color: black;
+#tweetbox {
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: #fff;
   padding: 5px;
   height: 200px;
   width: 500px;
+}
+
+#tweetlist {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: bold;
   text-align: left;
 }
 
+.singleTweet {
+  padding: 10px 0;
+  border-top: 1px solid #aaa;
+}
 
+.userName {
+  font-weight: bold;
+}
 
 

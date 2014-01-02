@@ -4,6 +4,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/data_generator.js"></script>
     <script src="js/twittler.js"></script>
+    <script src="js/jquery.timeago.js"></script>
     <link href="css/twittler.css" rel="stylesheet">
     <title>Twittler</title>
   </head>
@@ -13,8 +14,13 @@
       <input id="draft" type="textarea" placeholder="Compose new Tweet..." size="140"> 
       <button class="send" onclick="sendTweet()" >Tweet</button>
     </div>
-    <div class="tweetlist">
-    </div>
+    <div id="tweetbox">
+      <div id="newTweets">
+
+      </div>
+      <div id="tweetlist">
+      </div>
+    </div>  
     <div>
       <button id="refresh" onclick="refreshTweets()">Refresh Tweets</button>
     </div>
