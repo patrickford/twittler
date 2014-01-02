@@ -14,16 +14,18 @@
       <input id="draft" type="textarea" placeholder="Compose new Tweet..." size="140"> 
       <button class="send" onclick="sendTweet()" >Tweet</button>
     </div>
+    <div>
+      <button id="refresh" onclick="refreshTweets()">Refresh All Tweets</button>
+    </div>
     <div id="tweetbox">
       <div id="newTweets">
 
       </div>
       <div id="tweetlist">
+
       </div>
     </div>  
-    <div>
-      <button id="refresh" onclick="refreshTweets()">Refresh Tweets</button>
-    </div>
+
     <script>
 
       $(document).ready(function(){
