@@ -26,7 +26,7 @@ var refreshTweets = function(user){
 
     $singleTweet = $(''+ 
       '<div class="singleTweet">' +
-        '<div class="userName"> <a href="#">' + '@' + tweet.user + '</a></div>' +
+        '<div class="userName"> <a href="#" class=' + tweet.user + '>' + '@' + tweet.user + '</a></div>' +
         '<div class="tweetTime">' + jQuery.timeago(tweet.created_at) + '</div>' +
         '<div class="tweetCopy"> <p>'+ tweet.message + '</p> </div>' + 
       '</div>');
@@ -43,6 +43,7 @@ function sendTweet() {
   document.getElementById("draft").value = '';
 } 
 
-function userTweets() {
-  
-}
+$('#tweetlist').on('click', 'a', function() {
+  var user = this.getAttribute('class');
+  refreshTweets(user);
+});
