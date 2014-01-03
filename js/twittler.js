@@ -33,8 +33,8 @@ var refreshTweets = function(user){
 
     $singleTweet.appendTo('#tweetlist');
     index -= 1;
-  };
-}
+  }
+};
 
 function sendTweet() {
   var userInput = document.getElementById("draft").value;
@@ -43,7 +43,10 @@ function sendTweet() {
   document.getElementById("draft").value = '';
 } 
 
-$('#tweetlist').on('click', 'a', function() {
-  var user = this.getAttribute('class');
+$('.userName').on('click', (function() {
+  alert('clicked');
+  var user = $(this).getAttribute('class');
   refreshTweets(user);
-});
+}));
+
+
