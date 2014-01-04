@@ -26,7 +26,7 @@ var refreshTweets = function(user){
 
     $singleTweet = $(''+ 
       '<div class="singleTweet">' +
-        '<div class="userName"> <a href="#" class=' + tweet.user + '>' + '@' + tweet.user + '</a></div>' +
+        '<div class="userName"> <a href="#">' + '@' + tweet.user + '</a></div>' +
         '<div class="tweetTime">' + jQuery.timeago(tweet.created_at) + '</div>' +
         '<div class="tweetCopy"> <p>'+ tweet.message + '</p> </div>' + 
       '</div>');
@@ -34,6 +34,7 @@ var refreshTweets = function(user){
     $singleTweet.appendTo('#tweetlist');
     index -= 1;
   }
+  createEventListener();
 };
 
 function sendTweet() {
@@ -43,10 +44,13 @@ function sendTweet() {
   document.getElementById("draft").value = '';
 } 
 
-$('.userName').on('click', (function() {
-  alert('clicked');
-  var user = $(this).getAttribute('class');
-  refreshTweets(user);
-}));
+function createEventListener() {
+  $('.userName').on('click', (function(e) {
+    event.preventDefault(e);
+    var $user = $(this).find('a').text();
+    $user = $user.slice(1);
+    refreshTweets($user);
+  }));
+}
 
 
