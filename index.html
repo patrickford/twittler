@@ -3,36 +3,25 @@
   <head>
     <script src="js/jquery.js"></script>
     <script src="js/data_generator.js"></script>
+    <script src="js/jquery.timeago.js"></script>    
     <script src="js/twittler.js"></script>
-    <script src="js/jquery.timeago.js"></script>
     <link href="css/twittler.css" rel="stylesheet">
     <title>Twittler</title>
   </head>
   <body>
     <h1 class="logo">Twittler</h1>
-    <div class="newTweet">
-      <input id="draft" type="textarea" placeholder="Compose new Tweet..." size="140"> 
-      <button class="send" onclick="sendTweet()" >Tweet</button>
+
+    <form id="newTweet">
+      <input id="draft" type="textarea" placeholder="Compose new Tweet..." maxlength="140"> 
+      <button type="submit" class="send" >Tweet</button>
+    </form>
+
+    <div id="buttons">
+      <button id="refresh">Refresh All Tweets</button>
+      <button id="myTweets">Show My Tweets</button>
     </div>
-    <div>
-      <button id="refresh" onclick="refreshTweets()">Refresh All Tweets</button>
-      <button id="myTweets" onclick="refreshTweets(visitor)"> Show My Tweets</button>
-    </div>
-    <div id="tweetbox">
-      <div id="newTweets">
 
-      </div>
-      <div id="tweetlist">
+    <div id="tweetlist"></div>  
 
-      </div>
-    </div>  
-
-    <script>
-
-      $(document).ready(function(){
-        refreshTweets();
-      });
-
-    </script>
   </body>
 </html>

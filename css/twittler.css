@@ -30,15 +30,16 @@ a {
   width: 700px;
 }
 
-#tweetbox {
-  border: 1px solid #444;
-  border-radius: 10px;
-  background-color: #fff;
+#buttons {
+  margin: 10px 0;
 }
 
 #tweetlist {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: #fff;  
 }
 
 .singleTweet {
@@ -49,7 +50,6 @@ a {
   font-weight: bold;
   display: inline-block;
   padding: 10px 0 5px 20px;
-
 }
 
 .tweetTime {
@@ -64,4 +64,3 @@ a {
   padding: 0 0 10px 20px;
   display: block;
 }
-
